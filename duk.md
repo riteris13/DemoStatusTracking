@@ -147,17 +147,74 @@ Pasiekus reikiamą pilnumą bei kokybę, bei gavus patvirtinimą, metaduomenų v
  
 
 ## Versijavimas ir statusai
-**1. Kuo skiriasi statusai `Patvirtinta`, `Paskelbta [Aktyvi]`, `Paskelbta [Neaktyvi]`?**  
+**1. Kuo skiriasi statusai `Patvirtinta`, `Paskelbta [Aktyvi] [Pirminė]`, `Paskelbta [Aktyvi]`, `Paskelbta [Neaktyvi]`?**  
+A: 
+- Patvirtinta - versija, į kurią pilnai užpildyti metaduomenys, kurie buvo įvertinti ir patvirtinti duomenų įgaliotinio ir VSSA komandos. Jau matoma ir kitiems metaduomenų katalogo naudotojams, bet dar nepaskelbta kaip pirminė.
+- Paskelbta [Aktyvi] [Pirminė] - pagrindinė paskelbta naujausia IS metaduomenų versija, kuri nurodo dabartinę IS struktūrą.
+- Paskelbta [Aktyvi] - ankstesnės versijos, kurios vis dar palaikomos. Skirtos daugiau egzistuojančioms ir senoms integracijoms palaikyti, nerekomenduojama jomis remtis kuriant naujas integracijas.  
+
 **2. Ar galima turėti kelias aktyvias versijas tuo pačiu metu?**  
+A: Taip, kataloge gali būti kelios aktyvios versijos. Verta atkreipti dėmesį, jog aktyvi pirminė versija gali būti tik viena.  
+
 **3. Kada reikia kurti naują metaduomenų versiją?**  
+A: Nauja versija kuriama, kai:
+- Įvyksta reikšmingi IS pokyčiai (pvz. nauji duomenų rinkiniai, naujos paslaugos),  
+- Keičiami duomenų teikimo būdai ar semantika,
+- IS pereina į kitą gyvavimo stadiją (pvz. iš kūrimo į eksploataciją)
+
 
 ## DVMS projekto lenta
 **1. Kaip teikti rezultatus per GitHub repozitorių?**  
-**2. Kaip naudotis DVMS projekto lenta?**  
-**3. Kaip sukurti IS užduotį?**  
-**4. Kaip įkelti DCAT-AP-LT Excel failą į GitHub?**  
-**5. Kaip įkelti DSA failą į GitHub?**  
-**6. Kaip atlikti „Pull request“ ir pateikti rezultatus tikrinimui?**  
-**7. Kaip peržiūrėti pokyčius GitHub platformoje?**  
-**8. Kaip teikti komentarus apie pakeitimus?**  
-**9. Kada rezultatai paskelbiami „main“ šakoje?**  
+A: Apibendrinta žingsnių seka pateikiama žemiau, išsamesni paaiškinimai pateikti Metaduomenų pildymo vadove.
+- Pirmiausia reikia DVMS projekto lentoje sukurti naują IS užduotį.   
+- Toliau, pasiruošus įkelti rezultataus, užduoties statusas pakeičiamas į "Ruošiama", sukuriama nauja šaka (ang. *branch*).   
+- Sukūrus šaką, į jos *datasets/gov* aplanką sukuriami laikini failai pagal struktūrą:  
+metadata/datasets/gov/<institucija>/<is>/DCAT-AP-LT-Meta.xlsx  
+metadata/datasets/gov/<institucija>/<is>/<duomenų_rinkinys>/dsa.csv    
+- Tikrieji failai įkeliami per "Add file" -> "Upload files", o juos įkelus atliekamas "Commit changes"
+- Pasiruošus teikti rezultatus šakoje, kurioje yra teikiami rezultatai spaudžiame "Contribute", tada "Open pull request", tada "Create pull request"
+- Perkeliame užduotį į "Pateikta tikrinimui" stulpelį DVMS projekto lentoje.
+
+**2. Kaip sukurti IS užduotį?**  
+A: DVMS projekto lentoje spaudžiama "Add Item", tada "Create new issue", pasirenkamas užduoties tipas "Informacinės sistemos užduotis". Sukūrus užduotį reikia supildyti projekto duomenų kortelę, pateikiant tokius duomenis, kaip: institucijos pavadinimas, IS kodinis pavadinimas, koordinatorius, įgyvendinimo būdas.
+
+**3. Kaip įkelti DCAT-AP-LT Excel failą į GitHub?**  
+A: Apibendrinta žingsnių seka pateikiama žemiau, išsamesni paaiškinimai pateikti Metaduomenų pildymo vadove.
+- Pirmiausia sukuriama nauja šaka (ang. *branch*). 
+- Tada pasirenkame *datasets/gov* aplanką, jame spaudžiame "Add file", tada "Create new file".   
+- Toliau pagal nurodymus sukuriamas laikinas failas su aplanko struktūra: "metadata/datasets/gov/<institucija>/<is>/DCAT-AP-LT-Meta.xlsx" (čia institucija ir is įrašomi institucijos ir IS kodiniai pavadinimai). 
+- Spaudžiamas mygtukas "Commit changes". 
+- Sekantis žingsnis yra įkelti tikrąją failo versiją: spaudžiamas "Upload files" mygtukas, įkeliama tikroji failo versija.
+- Spaudžiama "Commit changes".  
+
+**4. Kaip įkelti DSA failą į GitHub?**  
+A: Apibendrinta žingsnių seka pateikiama žemiau, išsamesni paaiškinimai pateikti Metaduomenų pildymo vadove.  
+- Pirmiausia sukuriama nauja šaka (ang. *branch*). 
+- Tada pasirenkame *datasets/gov* aplanką, jame spaudžiame "Add file", tada "Create new file". 
+- Toliau pagal nurodymus sukuriamas laikinas failas su aplanko struktūra: "metadata/datasets/gov/<institucija>/<is>/<duomenų rinkinys>/dsa.csv" (čia institucija ir is įrašomi institucijos ir IS kodiniai pavadinimai). 
+- Spaudžiamas mygtukas "Commit changes". 
+- Sekantis žingsnis yra įkelti tikrąją failo versiją: spaudžiamas "Upload files" mygtukas, įkeliama tikroji failo versija.
+- Spaudžiama "Commit changes".  
+
+**5. Kaip atlikti „Pull request“ ir pateikti rezultatus tikrinimui?**  
+A: 
+- Šakoje, kurioje yra teikiami rezultatai spaudžiame "Contribute", tada "Open pull request", tada "Create pull request"
+- Perkeliame užduotį į "Pateikta tikrinimui" stulpelį DVMS projekto lentoje.
+
+**6. Kaip peržiūrėti pokyčius GitHub platformoje?**  
+A: Pokyčius peržiūrėti galima tuo atveju, jei GitHub platforma palaiko tų dokumentų tipo atvaizdavimą. Tokiu atveju:
+- Pasirenkame sukurtą "Pull request", tada spaudžiame "Files changed" kortelę.
+- Atsidariusiame lange matysime failo pakeitimus: raudonai žymimi šalinimai, o žaliai - pridėjimai.  
+
+**7. Kaip teikti komentarus apie pakeitimus?**  
+A: Apibendrinta žingsnių seka pateikiama žemiau, išsamesni paaiškinimai pateikti Metaduomenų pildymo vadove.  Komentarus galima teikti per pakeitimų peržiūros langą:  
+- Pasirenkame sukurtą "Pull request", tada spaudžiame "Files changed" kortelę.  
+- Atsidariusiame lange matysime failo pakeitimus.  
+- Užvedus pelytę ant norimos komentuoti eilutės, paspaudus mėlyną "+" kairėje pusėje, atidaromas komentaro teikimo langas.  
+- Spaudžiame "Start a review".  
+- Surašius norimus komentarus, viršuje spaudžiame "Review changes".  
+- Pasirodžiusiame lange paspaudus "Submit review" komentarai bus pateikti.  
+
+**8. Kada rezultatai paskelbiami „main“ šakoje?**  
+A: Rezultatus galima viešinti, juos pateikiant "main" šakoje, tik po VSSA komandos patikrinimo ir patvirtinimo. Siekiant rezultatus paskelbti, pasirenkame rezultatams sukurtą "Pull request", ir, jei pavyko automatiniai tikrinimai, pasirenkame "Merge pull request".
+ 
