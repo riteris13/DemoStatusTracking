@@ -47,14 +47,39 @@ A: Repozitorius - tai GitHub saugykla, kurioje institucijos teikia metaduomenų 
   
 
 ## Rolės ir atsakomybės
-**1. Kas yra duomenų tvarkytojas, duomenų valdytojas, duomenų valdymo įgaliotinis? Kuo jie skiriasi?**  
+**1. Kas yra duomenų tvarkytojas, duomenų valdytojas, duomenų valdymo įgaliotinis, duomenų administratorius ir duomenų architektas? Kuo jie skiriasi?**  
+A: Duomenų tvarkytojas - tai subjektas, kuris tvarko duomenis techniniame lygmenyje, duomenų valdytojo vardu. Pavyzdžiui, IS administratorius.
+
+Duomenų valdytojas - tai institucija, kuri valdo IS.  
+
+Duomenų valdymo įgaliotinis - paskirtas asmuo, atsakingas už duomenų valdymo politikos įgyvendinimą.  
+
+Duomenų administratorius - pildo techninius duomenis apie pateiktis, duomenų paslaugas, duomenų elementus.  Atsakingas už prieigos prie duomenų valdymą, IS saugos užtikrinimą, aplinkos, katalogo palaikymą.
+
+Duomenų architektas - atsakingas už veiklos srities ir semantinės informacijos pildymą, IS duomenų kokybės, prieigų prie duomenų valdymą.  
+
 **2. Kas atsakingas už metaduomenų pildymą ir tvirtinimą?**  
+A: Metaduomenis pildo duomenų architektas, IS duomenų įgaliotiniui ir VSSA architektų komandos nariams teikiant atgalinį ryšį. Metaduomenis tvirtina VSSA komanda.  
+
 **3. Kaip VSSA dalyvauja metaduomenų pildymo procese?**  
+A: VSSA valdo bendrą duomenų infrastruktūrą, padeda institucijoms duomenų architektūros klausimais, tikrina supildytus metaduomenis.
 
 ## Įrankiai ir procesai
 **1. Kas yra DCAT-AP-LT?**  
+A: DCAT-AP-LT - tai DCAT‑AP specifikacijos plėtinys, kuris apjungia BRegDCAT‑AP, DCAT‑AP‑HVD ir Lietuvos specifinius elementus, kad būtų galima struktūrizuoti Lietuvos valstybinių IS metaduomenis ir suderinti juos su ES standartais.  
+
 **2. Kas yra DSA, kuo tai skiriasi nuo ŠDSA?**  
-**3. Kaip metaduomenų katalogas susijęs su duomenų portalu? Kas juos administruoja?**  
+A: Duomenų srautų aprašas (DSA) - specifikacija, pagal kurią rengiami duomenų srautų aprašymai, reikalingi duomenų mainams tarp informacinių sistemų.
+
+ŠDSA - Šaltinio duomenų struktūros aprašas, kuriame aprašoma IS duomenų šaltinio struktūra. Šis yra automatiškai generuojamas duomenų agento "Spinta" pagalba.
+
+Trumpai, ŠDSA yra automatinis fizinės struktūros atvaizdas, o DSA - rankiniu būdu taisytas, galutinai parengtas loginis-semantinis aprašas, kuris skelbiamas kataloge.
+
+**3. Kaip metaduomenų katalogas susijęs su duomenų portalu? Kas juos administruoja**  
+A: Duomenų portalas kaupia bendruosius metaduomenis apie IS, organizacijas, atstovus, teikiamas paslaugas.  
+
+Metaduomenų kataloge saugomi ir versijuojami IS metaduomenys pagal DCAT-AP-LT specifikaciją.  
+
 
 ## Pildymo procesas
 **1. Kaip pakeisti validavimo taisykles Excel, norint praplėsti eilučių skaičių?**  
