@@ -83,17 +83,68 @@ Metaduomenų kataloge saugomi ir versijuojami IS metaduomenys pagal DCAT-AP-LT s
 
 ## Pildymo procesas
 **1. Kaip pakeisti validavimo taisykles Excel, norint praplėsti eilučių skaičių?**  
+A: Atidarykite pildomą DCAT-AP-LT formą, pasirinkite langelį, kuriame rodomas pasirinkimų sąrašas. Tuomet įrankių juostoje pasirinkite Duomenys -> Duomen7 tikrinimas (ang. *Data -> Data Validation*). Iššokusiame nustatymų lange pakeiskite šaltinio (ang. *Source*) diapazoną iki reikiamo dydžio (pvz. A1:A:20 į A1:A30).  
+
 **2. Kokios taisyklės galioja identifikatoriaus pavadinimui?**  
+A: Identifikatoriai kuriami rankiniu būdu naudojant tik lotyniškas raides be tarpų, atskirus žodžius pradedant didžiąja raide.  
+
 **3. Kas yra kardinalumas ir kam jo reikia?**  
-**4. Ką reiškia DCAT Excel lapų spalvos žalia, geltona, raudona?**  
+A: Kadinalumas nurodo, kiek reikšmių galima pateikti vienai savybei:  
+- [1] - galima nurodyti tik vieną reikšmę
+- [n] - galima nurodyti kelias reikšmes (nereiškia, kad nurodyti kelias reikšmes būtina).  
+Kardinalumas reikalingas, kad būtų aišku, ar savybė gali turėti kelis įrašus, ar tik vieną.
+
+**4. Ką reiškia DCAT Excel lapų spalvos žalia, geltona, rausva?**  
+A: Žalia - privalomas pildyti lapas.  
+Geltona - rekomenduojamas pildyti lapas.  
+Rausva - pasirenkamai pildomas lapas.  
+
 **5. Ką reiškia DCAT Excel langelių spalvos?**  
+A: Tamsiai pilka - identifikatorius.  
+Balta - pildoma laisvu tekstu., tiesiogiai suvedant reikšmes.  
+Geltona - langelis turi pasirenkamas reikšmes iš jau sudarytų kontroliuojamų žodynų. Galima rinktis tik nurodytas reikšmes.  
+Žalia - langelis turi pasirenkamas reikšmes iš kitų lapų. Norint juos užpildyti, turi būti sukurti reikiamos klasės egzemplioriai atitinkamuose lapuose, nurodytuose 2 eilutės paaiškinimuose.  
+
 **6. Kam reikalingas `prepare` stulpelis DSA lentelėje?**  
+A: "prepare" stulpelyje pildomos duomenų filtravimo ar paruošimo funkcijos. Tai leidžia aprašyti papildomas funkcijas, kaip filtravimas, konvertavimas. Taip pat modelių jungimui, papildomų savybių įtraukimui naudojamos agentui skirtos operacijos *include()*, *exclude()*, *expand()*.  
+
 **7. Kuo skiriasi bazinis ir papildomas esybės modeliai?**  
+A: Bazinis modelis  aprašo pirminį duomenų šaltinį (vienintelis ir autoritetingas duomenų šaltinis, suteikiantis objektams globalius identifikatorius), kuriame pirmą kartą yra registruojami Esybės objektai.  
+
 **8. Kaip sužinoti esybės/modelio brandos lygį?**  
+A: Brandos lygis nurodomas "level" stulpelyje ir priklauso nuo to ar yra patikimas pirminis raktas. Naudojami tokie brandos lygiai:  
+- 0 brandos lygis - duomenų nėra - nekaupiama.  
+- 1 brandos lygis - nenuskaitoma mašininiu būdu - duomenys publikuojami bet kokia forma, nėra vientisumo. Užpildyta "resource" eilutė.  
+- 2 brandos lygis - nestandartinis pateikimas - struktūruota forma bet pateikim būdas (formatas) nėra standartinis.  
+- 3 brandos lygis - nėra identifikatoriaus - struktūruota forma, standartinis formatas, užpildytas property.type ir duomenys atitinka nurodytą tipą.  
+- 4 brandos lygis - nesusieta su žodynais - duomenų objektai turi aiškius, unikalius identifikatorius. Užpildyti model.ref ir property.ref stulpeliai.  
+- 5 brandos lygis - trūkumų nėra.  
+
 **9. Kaip galima jungti modelius DSA lentelėse?**  
+A: Modelių jungimas atliekamas per "property" reikšmę, kai "type" nurodoma *ref*. "ref" stulpelyje nurodomas kitas modelis, arba pilnas URI.  
+ Jeigu modelis jungiamas ne per pirminį raktą, savybės, per kurias jungiama nurodomos laužtiniuose skliaustuose.   
+Jeigu jungimui yra naudojamas kompleksinis raktas, jungimo savybės yra nurodomos laužtiniuose skliaustuose, jas atskiriant kableliu. Tokiu atveju "prepare" stulpelyje taip pat reikia nurodyti tas savybes , o "source" stulpelis paliekamas tuščias.   
+
 **10. Kada DSA pildomas pagal šabloną, o kada pagal ŠDSA? Kas skiriasi?**  
+A: Pagal ŠDSA pildome tada, kai turime agento sugeneruotą fizinę struktūrą (ŠDSA).   
+Pagal šabloną pildome tada, kai fizinis modelis yra nežinomas, arba agentas nėra naudojamas.  
+
 **11. Kaip patikrinti, ar pildomi duomenys atitinka kontroliuojamus žodynus?**  
+A: 
+- DCAT-AP-LT Excel formoje: geltonos spalvos langeliai yra automatiškai susieti su kontroliuojamais žodynais, reikia tik pasiirnkti tinkamą.
+- DSA formoje: jei norite rankiniu būdu nurodyti žodyną savybei, "uri" stulpelyje įrašykite žodyno URI.
+- Žodynų sąrašai pateikti DCAT-AP-LT specifikacijoje ir metaduomenų pildymo vadovo skyriuje "Kontroliuojami žodynai".
+- Norėdami nustatyti, kokį žodyną naudoti, DCAT-AP-LT Excel formoje vadovaukitės savybės aprašymu, o pildant DSA - DSA specifikacija.   
+
 **12. Kuo skiriasi pildymas pagal gyvavimo stadijas nuo pildymo DVMS projekto apimtyje?**  
+A: Pagal gyvavimo stadijas - tai pagrindinis metaduomenų pildymo į metaduomenų katalogą procesas. Pildymas vykdomas pagal IS gyvavimo ciklą (steigimas, kūrimas, eksploatavimas, atnaujinimas, likvidavimas).
+
+Pildymas DVMS projekto apimtyje skiriasi nuo pildymo pagal gyvavimo stadijas, nes dauguma IS projekto apimtyje bus eksploatuojamos, tad metaduomenys pildomi pagal įgyvendintą faktinę duomenų ir IS informaciją. Procesas skirstomas į tris pagrindinius etapus: 
+- pagrindinės informacijos apie IS užpildymas ir DSA pildymas;
+- duomenų rinkinių ir DSA apjungimas į bendrą modelį;
+- veiklos terminijos gryninimas ir semantinis praturtinimas.  
+Pasiekus reikiamą pilnumą bei kokybę, bei gavus patvirtinimą, metaduomenų versija gali būti skelbiama kaip paskelbta, aktyvi, pirminė.  
+ 
 
 ## Versijavimas ir statusai
 **1. Kuo skiriasi statusai `Patvirtinta`, `Paskelbta [Aktyvi]`, `Paskelbta [Neaktyvi]`?**  
