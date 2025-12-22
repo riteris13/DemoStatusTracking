@@ -21,17 +21,17 @@ Kvalifikuotas ryšys - tai papildomas ryšys su kitais metaduomenų katalogo iš
 **Kaip atpažinti kvalifikuotą ryšį?**  
  Kvalifikuotas ryšys egzistuoja, kai:  
 * Jei duomenų rinkinys priklauso nuo kito ištekliaus (pvz., naudoja klasifikatorius, teisės aktus, semantinius ryšius), bet formoje nėra tam skirto lauko;  
-* Jei ryšys yra semantinis ar kontekstinis, o ne techninis per API;  
-* Jei ryšys duomenims suteikia papildomą informaciją, kuri svarbi duomenų naudotojams.  
-Pavyzdžiui, duomenų rinkyje "Gyventojai" naudojami savivaldybių kodus iš duomenų rinkinio "Adresų registras", bet tai yra atskiros IS, tad per esybę susieti negalime.
+* Jei ryšys yra semantinis ar kontekstinis, o ne techninis per API;
+* Jei ryšys duomenims suteikia papildomą informaciją, kuri svarbi duomenų naudotojams.
+Pavyzdžiui, duomenų rinkyje "Gyventojai" naudojami savivaldybių kodus iš duomenų rinkinio "Adresų registras", bet tai yra atskiros IS duomenys, tad tieisogiai per esybę susieti negalime.
 
 **7. Kodėl pirminė metaduomenų versija yra svarbi? Kas nusprendžia, kuri versija yra pirminė?**  
-A: Pirminė versija  - tai naujausia, pagrindinė, paskelbta IS metaduomenų versija, kurią rekomenduojama naudoti visoms integracijoms ir sutarčių sudarymui. Tai versija, kuri paskelbiama po patvirtinimo - kai kuriama arba atnaujinama IS pereina į eksploatacijos stadiją.  
+A: Pirminė versija  - tai naujausia, pagrindinė, paskelbta IS metaduomenų versija, kurią rekomenduojama naudoti visoms integracijoms ir sutarčių sudarymui. Tai versija, kuri paskelbiama po patvirtinimo - kai kuriama arba atnaujinama IS pereina į eksploatacijos stadiją.
 
-**8. Kas yra duomenų paslauga? Kuo skiriasi IS paslauga nuo duomenų paslaugos?**  
-A: Duomenų paslauga - tai operacijų rinkinys, suteikiantis prieigą prie vieno ar daugiau duomenų rinkinių, dažniausiai tai API.  Paprastai sakant, tai elektroninė paslauga, suteikianti prieigą prie duomenų.  
+**8. Kas yra duomenų paslauga? Kuo skiriasi IS paslauga nuo duomenų paslaugos?**
+A: Duomenų paslauga - tai operacijų rinkinys, suteikiantis prieigą prie vieno ar daugiau duomenų rinkinių, dažniausiai tai API.  Paprastai sakant, tai elektroninė paslauga, suteikianti prieigą prie duomenų.
 
-IS paslauga - bendresnė sąvoka, apibūdinanti IS teikiamas elektronines paslaugas (nebūtinai duomenų teikimui). Pavyzdžiui, elektroninė paslauga "Deklaruoti gyvenamąją vietą", arba "Registruoti transporto priemonę".  
+IS paslauga - bendresnė sąvoka, apibūdinanti IS teikiamas elektronines paslaugas (nebūtinai duomenų teikimui). Pavyzdžiui, elektroninė paslauga "Deklaruoti gyvenamąją vietą", arba "Registruoti transporto priemonę".
 
 **9. Kodėl reikia naudoti kontroliuojamus žodynus?**  
 A: Kontroliuojami žodynai - tai standartizuoti, institucijų tvirtinami sąrašai, kuriuose pateikiamos leidžiamos reikšmės tam tikroms metaduomenų savybėms. Naudojant kontroliuojamus žodynus yra užtikrinama, kad visos institucijos naudotų tas pačias, semantiškai suderintas reikšmes, kurios būtų suprantamos visų, tiek Lietuvos, tiek Europos, ar jei naudojami globalūs žodynai, Pasaulio lygmeniu.  
