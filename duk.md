@@ -37,13 +37,13 @@ IS paslauga - bendresnė sąvoka, apibūdinanti IS teikiamas elektronines paslau
 A: Kontroliuojami žodynai - tai standartizuoti, institucijų tvirtinami sąrašai, kuriuose pateikiamos leidžiamos reikšmės tam tikroms metaduomenų savybėms. Naudojant kontroliuojamus žodynus yra užtikrinama, kad visos institucijos naudotų tas pačias, semantiškai suderintas reikšmes, kurios būtų suprantamos visų, tiek Lietuvos, tiek Europos, ar jei naudojami globalūs žodynai, Pasaulio lygmeniu.  
 
 **10. Kas yra koncepcinis modelis ir kam jis reikalingas?**  
-A: Koncepcinis modelis - tai semantinis IS duomenų modelis, apibrėžiantis aukšto lygio koncepcijas, daiktus, esybes ir ryšius tarp jų, nepriklausomai nuo technologinio realizavimo. Dažnai vaizduojamas diagramomis arba vaizdinėmis priemonėmis. Pavyzdžiui, aukšto lygio subjektai gali būti viešosios paslaugos, viešosios institucijos.  
+A: Koncepcinis modelis - tai semantinis IS duomenų modelis, apibrėžiantis aukšto lygio koncepcijas, daiktus, esybes ir ryšius tarp jų, nepriklausomai nuo technologinio realizavimo. Dažnai vaizduojamas diagramomis arba vaizdinėmis priemonėmis. Šio projekto kontekste yra kuriami UML koncepciniai nodeliai. Pavyzdžiui, aukšto lygio elementai (esybės), kurie gali būti atvaizduojami koncepciniame modelyje - asmuo, juridinis asmuo, apdraustasis, santuoka, nekilnojamo turto objektas.
 
 **11. Kas yra pirminis duomenų šaltinis (*Master data*)?**  
-A: Pirminis duomenų šaltinis - tai vienintelis, autoritetingas duomenų šaltinis. Jame pirmą kartą registruojami esybės objektai ir suteikiami globalūs identifikatoriai. Tai patikimas tiesos šaltinis (ang. *single source of truth*).  
+A: Pirminis duomenų šaltinis - tai vienintelis, autoritetingas duomenų šaltinis. Jame pirmą kartą registruojami esybės objektai ir suteikiami globalūs identifikatoriai. Tai patikimas tiesos šaltinis (ang. *single source of truth*).
 
 **12. Kas yra repozitorius?**  
-A: Repozitorius - tai GitHub saugykla, kurioje institucijos teikia metaduomenų failus ir gali sekti statusą DVMS projekto lentoje. Tai saugus ir patikimas būdas saugoti atnaujinti informaciją, kadangi yra palaikoma versijų istorija, tai yra, bet kada galima atkurti senesnę versiją, peržiūrėti pokyčius tarp versijų.  
+A: Repozitorius - tai duomenų saugykla, DVMS metaduomenų kontekste tai GitHub platformos kodo saugykla, kurioje institucijos teikia metaduomenų failus ir gali sekti veiklų statusą DVMS projekto lentoje. Tai saugus ir patikimas būdas saugoti ir atnaujinti informaciją, kadangi yra palaikoma versijų istorija, tai yra, bet kada galima atkurti senesnę versiją, peržiūrėti pokyčius tarp versijų.  
   
 
 ## Rolės ir atsakomybės
@@ -54,12 +54,12 @@ Duomenų valdytojas - tai institucija, kuri valdo IS.
 
 Duomenų valdymo įgaliotinis - paskirtas asmuo, atsakingas už duomenų valdymo politikos įgyvendinimą.  
 
-Duomenų administratorius - pildo techninius duomenis apie pateiktis, duomenų paslaugas, duomenų elementus.  Atsakingas už prieigos prie duomenų valdymą, IS saugos užtikrinimą, aplinkos, katalogo palaikymą.
+Duomenų administratorius - duomenų tvarkytojo paskirtas asmuo, kuris pildo techninius duomenis apie pateiktis, duomenų paslaugas, duomenų elementus.  Atsakingas už prieigos prie duomenų valdymą, IS saugos užtikrinimą, metaduomenų katalogo techinių įrašų palaikymą.
 
-Duomenų architektas - atsakingas už veiklos srities ir semantinės informacijos pildymą, IS duomenų kokybės, prieigų prie duomenų valdymą.  
+Duomenų architektas - duomenų tvarkytojo paskirtas asmuo, kuris atsakingas už veiklos srities ir semantinės informacijos pildymą, IS duomenų kokybės, prieigų prie metaduomenų valdymą.  
 
 **2. Kas atsakingas už metaduomenų pildymą ir tvirtinimą?**  
-A: Metaduomenis pildo duomenų architektas, IS duomenų įgaliotiniui ir VSSA architektų komandos nariams teikiant atgalinį ryšį. Metaduomenis tvirtina VSSA komanda.  
+A: Metaduomenis pildo duomenų architektas, IS duomenų valdymo įgaliotinis ir VSSA architektų komandos nariai teikia šiems metaduomenims atgalinį ryšį. Metaduomenis tvirtina VSSA komanda.  
 
 **3. Kaip VSSA dalyvauja metaduomenų pildymo procese?**  
 A: VSSA valdo bendrą duomenų infrastruktūrą, padeda institucijoms duomenų architektūros klausimais, tikrina supildytus metaduomenis.
@@ -68,25 +68,25 @@ A: VSSA valdo bendrą duomenų infrastruktūrą, padeda institucijoms duomenų a
 **1. Kas yra DCAT-AP-LT?**  
 A: DCAT-AP-LT - tai DCAT‑AP specifikacijos plėtinys, kuris apjungia BRegDCAT‑AP, DCAT‑AP‑HVD ir Lietuvos specifinius elementus, kad būtų galima struktūrizuoti Lietuvos valstybinių IS metaduomenis ir suderinti juos su ES standartais.  
 
-**2. Kas yra DSA, kuo tai skiriasi nuo ŠDSA?**  
-A: Duomenų srautų aprašas (DSA) - specifikacija, pagal kurią rengiami duomenų srautų aprašymai, reikalingi duomenų mainams tarp informacinių sistemų.
+**2. Kas yra KDA ir DSA, kuo jie skiriasi nuo ŠDSA?**  
+A: Duomenų struktūros aprašas (DSA) - specifikacija, pagal kurią rengiami duomenų struktūrų aprašymai, reikalingi duomenų mainams tarp informacinių sistemų.
 
-ŠDSA - Šaltinio duomenų struktūros aprašas, kuriame aprašoma IS duomenų šaltinio struktūra. Šis yra automatiškai generuojamas duomenų agento "Spinta" pagalba.
+ŠDSA - Šaltinio duomenų struktūros aprašas, kuriame aprašoma IS duomenų šaltinio struktūra. Jis yra automatiškai generuojamas duomenų agento "Spinta" pagalba.
 
-Trumpai, ŠDSA yra automatinis fizinės struktūros atvaizdas, o DSA - rankiniu būdu taisytas, galutinai parengtas loginis-semantinis aprašas, kuris skelbiamas kataloge.
+Trumpai, ŠDSA yra automatinis fizinės struktūros atvaizdas, o DSA - rankiniu būdu koreguotas ŠDSA, galutinai parengtas loginis-semantinis aprašas, kuris skelbiamas kataloge.
+
+KDSA tai nuo ŠDSA ir duomenų šaltinio nepriklausomas, pagal senmantinį ir veiklos srities supratimą paruoštas struktūros aprašymas.
 
 **3. Kaip metaduomenų katalogas susijęs su duomenų portalu? Kas juos administruoja**  
-A: Duomenų portalas kaupia bendruosius metaduomenis apie IS, organizacijas, atstovus, teikiamas paslaugas.  
-
-Metaduomenų kataloge saugomi ir versijuojami IS metaduomenys pagal DCAT-AP-LT specifikaciją.  
+A: Duomenų portalas yra techninė metaduomenų katalogo realizacija, kuri kaupia metaduomenis apie IS, organizacijas, atstovus, teikiamas paslaugas.  
 
 
-## Pildymo procesas
-**1. Kaip pakeisti validavimo taisykles Excel, norint praplėsti eilučių skaičių?**  
-A: Atidarykite pildomą DCAT-AP-LT formą, pasirinkite langelį, kuriame rodomas pasirinkimų sąrašas. Tuomet įrankių juostoje pasirinkite Duomenys -> Duomen7 tikrinimas (ang. *Data -> Data Validation*). Iššokusiame nustatymų lange pakeiskite šaltinio (ang. *Source*) diapazoną iki reikiamo dydžio (pvz. A1:A:20 į A1:A30).  
+## Metaduomenų pildymo procesas
+**1. Kaip pakeisti validavimo taisykles DCAT-AP-LT Excel formoje, norint praplėsti eilučių skaičių?**  
+A: Atidarykite pildomą DCAT-AP-LT formą, pasirinkite langelį, kuriame rodomas pasirinkimų sąrašas. Tuomet įrankių juostoje pasirinkite Duomenys -> Duomenų tikrinimas (ang. *Data -> Data Validation*). Iššokusiame nustatymų lange pakeiskite šaltinio (ang. *Source*) diapazoną iki reikiamo dydžio (pvz. A1:A:20 į A1:A30).  
 
 **2. Kokios taisyklės galioja identifikatoriaus pavadinimui?**  
-A: Identifikatoriai kuriami rankiniu būdu naudojant tik lotyniškas raides be tarpų, atskirus žodžius pradedant didžiąja raide.  
+A: Identifikatoriai kuriami rankiniu būdu naudojant tik lotyniškas raides be tarpų, atskirus žodžius atskiriant pabraukimo "_" simboliu.  
 
 **3. Kas yra kardinalumas ir kam jo reikia?**  
 A: Kadinalumas nurodo, kiek reikšmių galima pateikti vienai savybei:  
@@ -101,32 +101,26 @@ Rausva - pasirenkamai pildomas lapas.
 
 **5. Ką reiškia DCAT Excel langelių spalvos?**  
 A: Tamsiai pilka - identifikatorius.  
-Balta - pildoma laisvu tekstu., tiesiogiai suvedant reikšmes.  
+Balta - pildoma laisvu tekstu, tiesiogiai suvedant reikšmes.  
 Geltona - langelis turi pasirenkamas reikšmes iš jau sudarytų kontroliuojamų žodynų. Galima rinktis tik nurodytas reikšmes.  
-Žalia - langelis turi pasirenkamas reikšmes iš kitų lapų. Norint juos užpildyti, turi būti sukurti reikiamos klasės egzemplioriai atitinkamuose lapuose, nurodytuose 2 eilutės paaiškinimuose.  
+Žalia - langelis turi pasirenkamas reikšmes iš kitų lapų. Norint juos užpildyti, turi būti sukurti reikiamos klasės egzemplioriai atitinkamuose lapuose, nurodytuose elemento paaiškinimuose.  
 
 **6. Kam reikalingas `prepare` stulpelis DSA lentelėje?**  
 A: "prepare" stulpelyje pildomos duomenų filtravimo ar paruošimo funkcijos. Tai leidžia aprašyti papildomas funkcijas, kaip filtravimas, konvertavimas. Taip pat modelių jungimui, papildomų savybių įtraukimui naudojamos agentui skirtos operacijos *include()*, *exclude()*, *expand()*.  
 
 **7. Kuo skiriasi bazinis ir papildomas esybės modeliai?**  
-A: Bazinis modelis  aprašo pirminį duomenų šaltinį (vienintelis ir autoritetingas duomenų šaltinis, suteikiantis objektams globalius identifikatorius), kuriame pirmą kartą yra registruojami Esybės objektai.  
+A: Bazinis modelis aprašo pirminį duomenų šaltinį (vienintelis ir autoritetingas duomenų šaltinis, suteikiantis objektams globalius identifikatorius), kuriame pirmą kartą yra registruojami Esybės objektai. Jis DSA dokumente nurodomas be bazinio modelio (base stulpelio) reikšmės. Papildomi, arba išvestiniai modeliai nurodomi su bazinio modelio reikšme ir pakartotinai naudoja bazinio modelio duomenis, tai pat gali juos labiau išplėsti arba specializuoti.
 
-**8. Kaip sužinoti esybės/modelio brandos lygį?**  
-A: Brandos lygis nurodomas "level" stulpelyje ir priklauso nuo to ar yra patikimas pirminis raktas. Naudojami tokie brandos lygiai:  
-- 0 brandos lygis - duomenų nėra - nekaupiama.  
-- 1 brandos lygis - nenuskaitoma mašininiu būdu - duomenys publikuojami bet kokia forma, nėra vientisumo. Užpildyta "resource" eilutė.  
-- 2 brandos lygis - nestandartinis pateikimas - struktūruota forma bet pateikim būdas (formatas) nėra standartinis.  
-- 3 brandos lygis - nėra identifikatoriaus - struktūruota forma, standartinis formatas, užpildytas property.type ir duomenys atitinka nurodytą tipą.  
-- 4 brandos lygis - nesusieta su žodynais - duomenų objektai turi aiškius, unikalius identifikatorius. Užpildyti model.ref ir property.ref stulpeliai.  
-- 5 brandos lygis - trūkumų nėra.  
+**8. Kaip sužinoti esybės/modelio arba savybės/atributo brandos lygį?**  
+A: Brandos lygis nurodomas "level" stulpelyje ir priklauso tiek nuo elemento metaduomenų tiek nuo tekiamų duomenų brandos. Priskiriami lygiai pagal tasykles DSA specifikacijoje. Aukščiausią brandą turi elementai, kurie yra susieti su semantiniais ištekliais, yra aiškiai aprašyti, yra žinomas teikiamų duomenų formatas, vienetai, tikslumas, jei tai modeliai(esybės) yra žinomi ir patikimi pirminiai raktai. 
 
 **9. Kaip galima jungti modelius DSA lentelėse?**  
-A: Modelių jungimas atliekamas per "property" reikšmę, kai "type" nurodoma *ref*. "ref" stulpelyje nurodomas kitas modelis, arba pilnas URI.  
- Jeigu modelis jungiamas ne per pirminį raktą, savybės, per kurias jungiama nurodomos laužtiniuose skliaustuose.   
-Jeigu jungimui yra naudojamas kompleksinis raktas, jungimo savybės yra nurodomos laužtiniuose skliaustuose, jas atskiriant kableliu. Tokiu atveju "prepare" stulpelyje taip pat reikia nurodyti tas savybes , o "source" stulpelis paliekamas tuščias.   
+A: Modelių jungimas atliekamas per "property" reikšmę, kai "type" nurodoma *ref*. "ref" stulpelyje nurodomas kito modelio pavadinimas, arba pilnas URI.  
+ Jeigu modelis jungiamas ne per pirminį raktą, savybės, per kurias jungiama nurodomos laužtiniuose skliaustuose po jungiamo modelio URI.   
+Jeigu jungimui yra naudojamas kompleksinis raktas, jungimo savybės yra nurodomos laužtiniuose skliaustuose, jas atskiriant kableliu. Tokiu atveju "prepare" stulpelyje taip pat reikia nurodyti jungimui naudojamas savybes.   
 
 **10. Kada DSA pildomas pagal šabloną, o kada pagal ŠDSA? Kas skiriasi?**  
-A: Pagal ŠDSA pildome tada, kai turime agento sugeneruotą fizinę struktūrą (ŠDSA).   
+A: Pagal ŠDSA pildome tada, kai turime agento sugeneruotą fizinės struktūros aprašą.   
 Pagal šabloną pildome tada, kai fizinis modelis yra nežinomas, arba agentas nėra naudojamas.  
 
 **11. Kaip patikrinti, ar pildomi duomenys atitinka kontroliuojamus žodynus?**  
@@ -137,30 +131,23 @@ A:
 - Norėdami nustatyti, kokį žodyną naudoti, DCAT-AP-LT Excel formoje vadovaukitės savybės aprašymu, o pildant DSA - DSA specifikacija.   
 
 **12. Kuo skiriasi pildymas pagal gyvavimo stadijas nuo pildymo DVMS projekto apimtyje?**  
-A: Pagal gyvavimo stadijas - tai pagrindinis metaduomenų pildymo į metaduomenų katalogą procesas. Pildymas vykdomas pagal IS gyvavimo ciklą (steigimas, kūrimas, eksploatavimas, atnaujinimas, likvidavimas).
+A: Pagal gyvavimo stadijas - tai pagrindinis metaduomenų pildymo į metaduomenų katalogą procesas. Pildymas vykdomas pagal IS gyvavimo ciklą (steigimas, kūrimas, eksploatavimas, atnaujinimas, likvidavimas) ir Valstybės Informacinių Išteklių Valdymo Įstatymo reikalavimus.
 
-Pildymas DVMS projekto apimtyje skiriasi nuo pildymo pagal gyvavimo stadijas, nes dauguma IS projekto apimtyje bus eksploatuojamos, tad metaduomenys pildomi pagal įgyvendintą faktinę duomenų ir IS informaciją. Procesas skirstomas į tris pagrindinius etapus: 
+Pildymas DVMS projekto apimtyje skiriasi nuo pildymo pagal gyvavimo stadijas, nes dauguma projekto apimtyje aprašomų IS jau yra eksploatuojamos, tad metaduomenys pildomi pagal įgyvendintą faktinę duomenų ir IS informaciją. Atliekamas pirminis metaduomenų užpildymas. Procesas skirstomas į tris pagrindinius etapus: 
 - pagrindinės informacijos apie IS užpildymas ir DSA pildymas;
 - duomenų rinkinių ir DSA apjungimas į bendrą modelį;
 - veiklos terminijos gryninimas ir semantinis praturtinimas.  
-Pasiekus reikiamą pilnumą bei kokybę, bei gavus patvirtinimą, metaduomenų versija gali būti skelbiama kaip paskelbta, aktyvi, pirminė.  
+Pasiekus reikiamą pilnumą bei kokybę, bei gavus patvirtinimą, metaduomenys skelbiami metaduomenų kataloge.  
  
 
-## Versijavimas ir statusai
-**1. Kuo skiriasi statusai `Patvirtinta`, `Paskelbta [Aktyvi] [Pirminė]`, `Paskelbta [Aktyvi]`, `Paskelbta [Neaktyvi]`?**  
-A: 
-- Patvirtinta - versija, į kurią pilnai užpildyti metaduomenys, kurie buvo įvertinti ir patvirtinti duomenų įgaliotinio ir VSSA komandos. Jau matoma ir kitiems metaduomenų katalogo naudotojams, bet dar nepaskelbta kaip pirminė.
-- Paskelbta [Aktyvi] [Pirminė] - pagrindinė paskelbta naujausia IS metaduomenų versija, kuri nurodo dabartinę IS struktūrą.
-- Paskelbta [Aktyvi] - ankstesnės versijos, kurios vis dar palaikomos. Skirtos daugiau egzistuojančioms ir senoms integracijoms palaikyti, nerekomenduojama jomis remtis kuriant naujas integracijas.  
-
-**2. Ar galima turėti kelias aktyvias versijas tuo pačiu metu?**  
-A: Taip, kataloge gali būti kelios aktyvios versijos. Verta atkreipti dėmesį, jog aktyvi pirminė versija gali būti tik viena.  
+## Metaduomenų versijavimas ir statusai
+**1. Ar galima turėti kelias aktyvias metaduomenų versijas tuo pačiu metu?**  
+A: Taip, kataloge gali būti kelios aktyvios versijos. Verta atkreipti dėmesį, jog aktyvi nuomatytoji versija gali būti tik viena, pagal nutylėjimą ji yra naujausia išlesta versija.  
 
 **3. Kada reikia kurti naują metaduomenų versiją?**  
 A: Nauja versija kuriama, kai:
 - Įvyksta reikšmingi IS pokyčiai (pvz. nauji duomenų rinkiniai, naujos paslaugos),  
-- Keičiami duomenų teikimo būdai ar semantika,
-- IS pereina į kitą gyvavimo stadiją (pvz. iš kūrimo į eksploataciją)
+- Keičiami duomenų teikimo būdai ar semantika.
 
 
 ## DVMS projekto lenta
